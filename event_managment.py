@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 import time
 from tkinter  import*
 import sqlite3
@@ -335,6 +329,10 @@ def work(log):
     wrk.mainloop()
         
 
+def admin_shadow(root):
+    root.destroy()
+    admin()
+
 def admin():
     log=Tk()
     username=StringVar()
@@ -378,7 +376,6 @@ def admin():
     log.mainloop()
 
 
-# In[ ]:
 
 
 
