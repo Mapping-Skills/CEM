@@ -1,7 +1,7 @@
 from tkinter import *
 import login_button_function
 import forget_password_window_page
-
+import event_managment
 
 def home_page_window():
     def login():
@@ -14,7 +14,7 @@ def home_page_window():
         forget_password_window_page.forget_password_window()
 
     def admin():
-        pass
+        event_managment.admin_shadow(root)
 
     # Frame1
     details_frame = Frame(root, bg="#4C93EA", borderwidth=1, relief="flat", height=100, width=200)
@@ -76,4 +76,4 @@ title_label.grid(padx=195, pady=30)
 home_page_window()
 
 root.mainloop()
-forget_password_window_page.de
+
