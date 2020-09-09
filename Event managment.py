@@ -335,47 +335,47 @@ def work(log):
     wrk.mainloop()
         
 
+def admin():
+    log=Tk()
+    username=StringVar()
+    password=StringVar()
+    username.set("")
+    password.set("")
+    log.geometry("600x200+400+300")
+    log.title("MODIFY")
 
-log=Tk()
-username=StringVar()
-password=StringVar()
-username.set("")
-password.set("")
-log.geometry("600x200+400+300")
-log.title("MODIFY")
+    lbl=Label(log,text="",font=("ariel",10,"bold"),fg="green")
+    lbl.grid(row=0,column=0)
+    user=Label(log,text="User Name :",font=("ariel",10,"italic"),fg="black",bd=8)
+    user.grid(row=1,column=1)
+    pss=Label(log,text="Password :",font=('ariel',10,"italic"),fg="black",bd=10)
+    pss.grid(row=3,column=1)
 
-lbl=Label(log,text="",font=("ariel",10,"bold"),fg="green")
-lbl.grid(row=0,column=0)
-user=Label(log,text="User Name :",font=("ariel",10,"italic"),fg="black",bd=8)
-user.grid(row=1,column=1)
-pss=Label(log,text="Password :",font=('ariel',10,"italic"),fg="black",bd=10)
-pss.grid(row=3,column=1)
+    usere=Entry(log,font=('ariel',10),textvariable=username,fg="black",justify="left")
+    usere.grid(row=1,column=4)
+    psse=Entry(log,font=('ariel',10),textvariable=password,fg="black",justify="left")
+    psse.grid(row=3,column=4)
 
-usere=Entry(log,font=('ariel',10),textvariable=username,fg="black",justify="left")
-usere.grid(row=1,column=4)
-psse=Entry(log,font=('ariel',10),textvariable=password,fg="black",justify="left")
-psse.grid(row=3,column=4)
-
-def w():
-    if username.get()==user1 and password.get()==pss1 :
-        work(log)
-    else:
-        print("wrong id password")
-u_bttn=Button(log,width=10,fg="black",text="Login",command=w)
-u_bttn.grid(row=4,column=1)
+    def w():
+        if username.get()==user1 and password.get()==pss1 :
+            work(log)
+        else:
+            print("wrong id password")
+    u_bttn=Button(log,width=10,fg="black",text="Login",command=w)
+    u_bttn.grid(row=4,column=1)
 
 
-u_bttn=Button(log,width=10,fg="black",text="Forgot!")
-u_bttn.grid(row=4,column=4)
+    u_bttn=Button(log,width=10,fg="black",text="Forgot!")
+    u_bttn.grid(row=4,column=4)
 
-lbl_1=Label(log,text="",font=("ariel",8,"bold"),fg="green")
-lbl_1.grid(row=4,column=3)
-lbl_2=Label(log,text="Click on Forgot!,if you forgot your Password",font=("ariel",8,"bold"),fg="green")
-lbl_2.grid(row=5,column=3)
-lbl_3=Label(log,text="college details",font=("ariel",8,"bold"),fg="black")
-lbl_3.grid(row=6,column=3)
-lbl_3.bind("<Button>", lambda e: c_data(log))
-log.mainloop()
+    lbl_1=Label(log,text="",font=("ariel",8,"bold"),fg="green")
+    lbl_1.grid(row=4,column=3)
+    lbl_2=Label(log,text="Click on Forgot!,if you forgot your Password",font=("ariel",8,"bold"),fg="green")
+    lbl_2.grid(row=5,column=3)
+    lbl_3=Label(log,text="college details",font=("ariel",8,"bold"),fg="black")
+    lbl_3.grid(row=6,column=3)
+    lbl_3.bind("<Button>", lambda e: c_data(log))
+    log.mainloop()
 
 
 # In[ ]:
